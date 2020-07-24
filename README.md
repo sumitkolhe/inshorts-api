@@ -16,8 +16,10 @@ The v2 API comes with better fetching speeds, more accurate and ordered results,
 
 - :rocket: Blazing fast
 - :page_facing_up: 15 different categories to choose from
-- :label: Support for **trending**, **top** and **all** news.
+- :label: Support for **trending**, **top** and **all** news along with 15 different news topics/categories.
 - :construction: Ability to limit the number of results per page.
+
+---
 
 ## :card_file_box: News Categories
 
