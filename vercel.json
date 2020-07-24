@@ -1,0 +1,24 @@
+{
+  "version": 2,
+
+  "routes": [
+    {
+      "src": "/",
+
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+
+        "Access-Control-Allow-Methods": "GET",
+
+        "Access-Control-Allow-Headers": " Content-Type",
+
+        "continue": "true"
+      },
+
+      "dest": "/api/index.js"
+    },
+
+    { "src": "/topic/(?<topicname>[^/]+)(/)*(?<limit>[^/]+)*", "dest": "/api/topics.js?topic=$topicname&limit=$limit" },
+    { "src": "/news/(?<category>[^/]+)(/)*(?<limit>[^/]+)*", "dest": "/api/news.js?category=$category&limit=$limit" }
+  ]
+}
