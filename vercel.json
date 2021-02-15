@@ -4,39 +4,7 @@
   "routes": [
     {
       "src": "/",
-
-      "headers": {
-        "Access-Control-Allow-Origin": "*",
-
-        "Access-Control-Allow-Methods": "GET",
-
-        "Access-Control-Allow-Headers": " Content-Type"
-      },
-
-      "dest": "/api/index.js"
-    },
-
-    {
-      "src": "/topic/(?<topicname>[^/]+)(/)*(?<limit>[^/]+)*",
-      "headers": {
-        "Access-Control-Allow-Origin": "*",
-
-        "Access-Control-Allow-Methods": "GET",
-
-        "Access-Control-Allow-Headers": " Content-Type"
-      },
-      "dest": "/api/topics.js?topic=$topicname&limit=$limit"
-    },
-    {
-      "src": "/news/(?<category>[^/]+)(/)*(?<limit>[^/]+)*",
-      "headers": {
-        "Access-Control-Allow-Origin": "*",
-
-        "Access-Control-Allow-Methods": "GET",
-
-        "Access-Control-Allow-Headers": " Content-Type"
-      },
-      "dest": "/api/news.js?category=$category&limit=$limit"
+      "dest": "/api/index.ts"
     }
   ]
 }
