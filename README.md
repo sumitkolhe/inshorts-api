@@ -34,7 +34,7 @@ Here is a complete list of all the supported categories.
 
 # :mag: Usage
 
-You can use either of the categories from [News Categories](#news-categories)
+You can use either of the categories from [News Categories](##card_file_box-news-categories)
 
 **Base endpoint :** `https://inshortsv2.vercel.app/news`
 
