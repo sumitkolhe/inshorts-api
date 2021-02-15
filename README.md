@@ -1,82 +1,57 @@
 # 📰 Inshorts News API v2
 
----
-
 #### This is the v2 for my previous Inshorts News API. You can check out the v1 [here.](https://github.com/sumitkolhe/inshorts-api)
 
----
-
-### # So why a new version?
-
-The v2 API comes with better fetching speeds, more accurate and ordered results, and a wider array of categories than the v1 API. The v2 API directly incorporates official Inshorts API underneath that provides all these benefits.
-
----
-
-### :sparkles: Features
+# :sparkles: Features
 
 - :rocket: Blazing fast
-- :page_facing_up: 15 different categories to choose from
-- :label: Support for **trending**, **top** and **all** news along with 15 different news topics/categories.
+- :page_facing_up: 18 different categories to choose from
 - :construction: Ability to limit the number of results per page.
+- :package: Host your own instance on vercel with a click of a button.
 
----
+# :card_file_box: News Categories
 
-## :card_file_box: News Categories
+Here is a complete list of all the supported categories.
 
-This API has support for **all, trending** and **top** news along with 15 different categories. Here is a complete list of all the supported categories.
+1. all_news
+2. trending
+3. top_stories
+4. national
+5. business
+6. politics
+7. sports
+8. technology
+9. startups
+10. entertainment
+11. hatke
+12. education
+13. world
+14. automobile
+15. science
+16. travel
+17. miscellaneous
+18. fashion
 
-1. national
-2. business
-3. politics
-4. sports
-5. technology
-6. startups
-7. entertainment
-8. hatke
-9. education
-10. world
-11. automobile
-12. science
-13. travel
-14. miscellaneous
-15. fashion
+# :mag: Usage
 
-#### You can check all the API endpoints here https://inshortsv2.vercel.app
+You can use either of the categories from [News Categories](#news-categories)
 
----
+**Base endpoint :** `https://inshortsv2.vercel.app/news`
 
-## :mag: Usage
-
-
-### There are two ways to get news stories :
-
-
-
-#### 1. Getting `All`, `Trending` or `Top` news stories :
-
-**Base URL** : https://inshortsv2.vercel.app/news/
-
-You can use either of these endpoints : 
-
-1. `all` 
-2. `top` 
-3. `trending`
-
-
-Make a `GET`request to the **Base URL** to get the corresponding news in JSON format
+Make a `GET`request to the **Base endpoint** with the name of the category to get the corresponding news in JSON format
 
 ```
-https://inshortsv2.vercel.app/news/{type}
+https://inshortsv2.vercel.app/news?type={category name}
 ```
 
-**Example** - https://inshortsv2.vercel.app/news/all
+**Example** - https://inshortsv2.vercel.app/news?type=all_news
 
+To limit the number of results per page, add `{limit}` at the end of the API url.
 
-To limit the number of results per page, add `/{limit count}` at the end of the API url.
+**Example** - https://inshortsv2.vercel.app/news?type=all_news&limit=23 
+- This will limit the results to 23 for that request.
 
-**Example** - https://inshortsv2.vercel.app/news/all/23   this will limit the results to 23 for that page
-
-> **NOTE :** If no limit is provided, default limit is 10 results per page
+> **NOTE :** If no limit is provided, default limit is set to 10 results per page.
 
 ---
 
@@ -86,144 +61,70 @@ The response JSON Object looks something like this -
 
 ```JSON
 {
-  "total": 9,
+  "total": 2,
   "articles": [
     {
-      "title": "Sonia, Rahul recall 'bold leadership' of ex-PM PV Narasimha Rao",
-      "description": "On the occasion of former PM PV Narasimha Rao's birth centenary, Congress President Sonia Gandhi paid tribute to him and said that India overcame several challenges \"successfully\" due to his \"bold leadership\". Congress leader Rahul Gandhi said that the former PM's remarkable political journey reflected his \"grit and determination\" and his contribution \"continues to shape modern India\".",
-      "author": "Kiran Khatri",
-      "source_name": "ANI",
-      "source_url": "https://www.aninews.in/news/national/general-news/sonia-rahul-gandhi-recall-bold-leadership-achievements-and-contributions-of-pv-narasimha-rao20200724141933/?utm_campaign=fullarticle&utm_medium=referral&utm_source=inshorts",
-      "image_url": "https://static.inshorts.com/inshorts/images/v1/variants/jpg/m/2020/07_jul/24_fri/img_1595593537891_958.jpg?",
-      "created_at": 1595598762000,
-      "inshorts_url": "https://shrts.in/KkNP"
+      "title": "Gujarat government will soon bring in law against 'love jihad': CM",
+      "description": "Gujarat CM Vijay Rupani said on Sunday that the BJP-led state government will soon introduce law against 'love jihad'. \"The manner in which girls are being lured, won't go on for long,\" he added at a poll rally in Vadodara. BJP-led governments in UP and Madhya Pradesh have already brought in similar laws against conversion through fraudulent means or marriage.",
+      "author_name": "Sharangee Dutta",
+      "source_name": "Twitter",
+      "source_url": "https://twitter.com/ANI/status/1361163467600789504?utm_campaign=fullarticle&utm_medium=referral&utm_source=inshorts",
+      "image_url": "https://static.inshorts.com/inshorts/images/v1/variants/jpg/m/2021/02_feb/15_mon/img_1613372177248_930.jpg?",
+      "created_at": 1613373403000,
+      "inshorts_url": "https://shrts.in/7gCM"
     },
     {
-      "title": "My wife was the one who pushed me to resume shoot: Kapil Sharma",
-      "description": "On being asked if his wife, Ginni Chatrath, was fine with him resuming the shoot of 'The Kapil Sharma Show', actor-comedian Kapil Sharma said, \"Ginni was the one to push me to resume shoot.\" \"She jokingly said I annoyed her in...last four months,\" he added. Kapil further said he was initially reluctant to resume work but Ginni convinced him. ",
-      "author": "Udit Gupta",
-      "source_name": "PINKVILLA",
-      "source_url": "https://www.pinkvilla.com/tv/news-gossip/exclusive-kapil-sharma-resuming-tkss-shoot-no-live-audience-new-normal-ginni-pushing-him-resume-551378?amp=&utm_campaign=fullarticle&utm_medium=referral&utm_source=inshorts",
-      "image_url": "https://static.inshorts.com/inshorts/images/v1/variants/jpg/m/2020/07_jul/24_fri/img_1595591751600_819.jpg?",
-      "created_at": 1595598341000,
-      "inshorts_url": "https://shrts.in/m42L"
+      "title": "Pujara loses grip of bat and gets run out after it slips out of his hand",
+      "description": "India batsman Cheteshwar Pujara got run out on sixth delivery of the third day of the second Test against England. The 33-year-old flicked a delivery to the short leg fielder, who threw the ball back to the keeper. Pujara failed to reach the crease in time as he lost the grip of his bat, which slipped out of his hand.",
+      "author_name": "Anmol Sharma",
+      "source_name": "CricTracker",
+      "source_url": "https://www.crictracker.com/india-vs-england-cheteshwar-pujara-drops-his-bat-gets-run-out-in-bizarre-fashion/?amp=&utm_campaign=fullarticle&utm_medium=referral&utm_source=inshorts",
+      "image_url": "https://static.inshorts.com/inshorts/images/v1/variants/jpg/m/2021/02_feb/15_mon/img_1613371011546_262.jpg?",
+      "created_at": 1613373231000,
+      "inshorts_url": "https://shrts.in/ZmZH"
     },
   ]
 }
 ```
+
 ---
 
-#### 2. Getting news stories by topics/categories:
+## :construction_worker: Local development
 
-**Base URL** : https://inshortsv2.vercel.app/topics/
+### Prerequisites
 
-You can use either of these endpoints : 
-
-1. `national`
-2. `business`
-3. `politics`
-4. `sports`
-5. `technology`
-6. `startups`
-7. `entertainment`
-8. `hatke`
-9. `education`
-10. `world`
-11. `automobile`
-12. `science`
-13. `travel`
-14. `miscellaneous`
-15. `fashion`
-
-
-Make a `GET`request to the **Base URL** to get the corresponding news in JSON format
-
-```
-https://inshortsv2.vercel.app/topics/{topic name}
-```
-
-**Example** - https://inshortsv2.vercel.app/topic/national
-
-
-To limit the number of results per page, add `/{limit count}` at the end of the API url.
-
-**Example** - https://inshortsv2.vercel.app/topic/national/15   this will limit the results to 15 for that page
-
-> **NOTE :** If no limit is provided, default limit is 10 results per page
----
-
-####  # Response Format
-
-The response JSON Object looks something like this -
-
-```JSON
-{
-  "total": 9,
-  "articles": [
-    {
-      "title": "Sonia, Rahul recall 'bold leadership' of ex-PM PV Narasimha Rao",
-      "description": "On the occasion of former PM PV Narasimha Rao's birth centenary, Congress President Sonia Gandhi paid tribute to him and said that India overcame several challenges \"successfully\" due to his \"bold leadership\". Congress leader Rahul Gandhi said that the former PM's remarkable political journey reflected his \"grit and determination\" and his contribution \"continues to shape modern India\".",
-      "author": "Kiran Khatri",
-      "source_name": "ANI",
-      "source_url": "https://www.aninews.in/news/national/general-news/sonia-rahul-gandhi-recall-bold-leadership-achievements-and-contributions-of-pv-narasimha-rao20200724141933/?utm_campaign=fullarticle&utm_medium=referral&utm_source=inshorts",
-      "image_url": "https://static.inshorts.com/inshorts/images/v1/variants/jpg/m/2020/07_jul/24_fri/img_1595593537891_958.jpg?",
-      "created_at": 1595598762000,
-      "inshorts_url": "https://shrts.in/KkNP"
-    },
-    {
-      "title": "My wife was the one who pushed me to resume shoot: Kapil Sharma",
-      "description": "On being asked if his wife, Ginni Chatrath, was fine with him resuming the shoot of 'The Kapil Sharma Show', actor-comedian Kapil Sharma said, \"Ginni was the one to push me to resume shoot.\" \"She jokingly said I annoyed her in...last four months,\" he added. Kapil further said he was initially reluctant to resume work but Ginni convinced him. ",
-      "author": "Udit Gupta",
-      "source_name": "PINKVILLA",
-      "source_url": "https://www.pinkvilla.com/tv/news-gossip/exclusive-kapil-sharma-resuming-tkss-shoot-no-live-audience-new-normal-ginni-pushing-him-resume-551378?amp=&utm_campaign=fullarticle&utm_medium=referral&utm_source=inshorts",
-      "image_url": "https://static.inshorts.com/inshorts/images/v1/variants/jpg/m/2020/07_jul/24_fri/img_1595591751600_819.jpg?",
-      "created_at": 1595598341000,
-      "inshorts_url": "https://shrts.in/m42L"
-    },
-  ]
-}
-```
----
-
-## :construction_worker: Setup
-
-This API is created as a collection of multiple different serverless functions that are specifically made to be hosted on **Vercel**. You can modify the code to make it work with **Nodejs based server** or as **AWS Lambda functions**
+- NodeJS v10+
+- Vercel CLI : To install Vercel CLI globally use `npm i -g vercel`
 
 ### Run locally
 
-- You will need Vercel CLI to run this locally.
-
-```
-npm i -g vercel
-```
-
-- Login into vercel CLI by following documentation here https://vercel.com/docs/cli#commands/login
-
 - Clone the Repo
 
-```
-$ git clone https://github.com/sumitkolhe/inshorts-api-v2
+  ```
+  $ git clone https://github.com/sumitkolhe/inshorts-api-v2
 
-$ cd inshorts-api-v2
-```
+  $ cd inshorts-api-v2
+  ```
 
 - Install the dependencies
 
-```
-npm install
-```
+  ```
+  npm install
+  ```
 
-- Run the API
+- Start development server
 
-```
-vercel dev
-```
+  ```
+  npm start
+  ```
 
-> **NOTE:** You will need to deploy the project to Vercel first even if you want to run it locally using `vercel dev`. The Vercel CLI wil guide you through the process.
+- Deploy to your vercel account
 
----
+  ```
+  npm run deploy
+  ```
 
-## :rocket: Deploy to Vercel
+# :rocket: Deploy to Vercel
 
 **You can directly deploy this repo to your Vercel account by clicking the button below.**
 <br>
