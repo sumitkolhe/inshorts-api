@@ -4,7 +4,16 @@
   "routes": [
     {
       "src": "/",
-      "dest": "/api/index.ts"
+      "dest": "/api/news.ts"
+    },
+    {
+      "src": "/news",
+      "methods": ["GET"],
+      "dest": "/api/news.ts"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/news.ts"
     }
   ]
 }
