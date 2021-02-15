@@ -2,17 +2,10 @@
   "version": 2,
 
   "routes": [
-    {
-      "src": "/",
-      "dest": "/api/news.ts"
-    },
+    { "src": "/", "dest": "/api/news.ts" },
     {
       "src": "/news",
       "methods": ["GET"],
-      "dest": "/api/news.ts"
-    },
-    {
-      "src": "/(.*)",
       "dest": "/api/news.ts"
     }
   ]

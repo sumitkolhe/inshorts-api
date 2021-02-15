@@ -1,7 +1,7 @@
 import axios from "axios";
 import { NowRequest, NowResponse } from "@vercel/node";
-import { getNewsEndpoint } from "./endpoint";
-import { addHeaders } from "./header";
+import { getNewsEndpoint } from "../utils/endpoint";
+import { addHeaders } from "../utils/header";
 
 interface Article {
   news_obj: {
