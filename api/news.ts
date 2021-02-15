@@ -24,7 +24,7 @@ module.exports = async (req: NowRequest, res: NowResponse) => {
   if (!news_type) {
     res.json({
       status: "online",
-      Documentation: "https://github.com/sumitkolhe/inshorts-api-v2",
+      Documentation: "https://github.com/sumitkolhe/inshorts-api-v2#-inshorts-news-api-v2",
     });
   } else {
     const newsResponse = new Object();
