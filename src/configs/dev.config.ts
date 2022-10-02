@@ -6,10 +6,6 @@ export const devConfig: Config = {
     host: 'localhost',
     port: 3000,
   },
-  database: {
-    dbName: 'local_dev',
-    dbUrl: 'mongodb://localhost:27017',
-  },
   cors: {
     origin: true,
     credentials: true,

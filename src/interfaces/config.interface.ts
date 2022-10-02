@@ -4,10 +4,6 @@ export interface Config {
     host: string
     port: number
   }
-  database: {
-    dbName: string
-    dbUrl: string
-  }
   cors: {
     origin: string | boolean
     credentials: boolean
