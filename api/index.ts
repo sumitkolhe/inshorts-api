@@ -1,4 +1,3 @@
-import 'dotenv/config'
 import { App } from '../src/app'
 import { IndexRoute } from '../src/routes/index.route'
 
