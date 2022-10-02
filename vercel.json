@@ -1,12 +1,35 @@
 {
-  "version": 2,
-
-  "routes": [
-    { "src": "/", "dest": "/api/news.ts" },
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [{ "source": "(.*)", "destination": "/api" }],
+  "headers": [
     {
-      "src": "/news",
-      "methods": ["GET"],
-      "dest": "/api/news.ts"
+      "source": "(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, OPTIONS"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=300, stale-while-revalidate"
+        },
+        {
+          "key": "Author",
+          "value": "Sumit Kolhe"
+        },
+        {
+          "key": "Github",
+          "value": "https://github.com/sumitkolhe/inshorts-api"
+        }
+      ]
     }
   ]
 }
