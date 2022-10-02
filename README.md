@@ -1,6 +1,4 @@
-# 📰 Inshorts News API v2
-
-#### This is the v2 for my previous Inshorts News API. You can check out the v1 [here.](https://github.com/sumitkolhe/inshorts-api)
+# 📰 Inshorts News API
 
 # :sparkles: Features
 
