@@ -14,4 +14,8 @@ export const devConfig: Config = {
     format: 'dev',
     level: 'debug',
   },
+  inshorts: {
+    readApiBaseUrl: 'https://read-api.newsinshorts.com',
+    searchApiBaseUrl: 'https://search-api.newsinshorts.com',
+  },
 }

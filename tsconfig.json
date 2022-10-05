@@ -8,8 +8,8 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "module": "commonjs",
+    "moduleResolution": "Node",
+    "module": "CommonJS",
     "pretty": true,
     "sourceMap": false,
     "declaration": true,
@@ -21,6 +21,6 @@
     "importHelpers": true,
     "baseUrl": "src"
   },
-  "include": ["src/**/*.ts", "src/**/*.json", ".env"],
+  "include": ["src/**/*.ts", "api/**/*.ts", ".env"],
   "exclude": ["node_modules"]
 }

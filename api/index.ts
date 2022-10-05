@@ -1,6 +1,6 @@
-import { App } from '../src/app'
-import { IndexRoute } from '../src/routes/index.route'
+import { App } from '../src/app.js'
+import { NewsRoute } from '../src/routes/news.route.js'
 
-const app = new App([new IndexRoute()])
+const app = new App([new NewsRoute()])
 
 export default app.getServer()

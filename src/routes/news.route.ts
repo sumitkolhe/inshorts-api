@@ -1,17 +1,17 @@
 import { Router } from 'express'
-import { IndexController } from '../controllers/index.controller'
+import { NewsController } from '../controllers/news.controller'
 import type { Routes } from '../interfaces/routes.interface'
 
-export class IndexRoute implements Routes {
+export class NewsRoute implements Routes {
   public path = '/'
   public router = Router()
-  public indexController = new IndexController()
+  public newsController = new NewsController()
 
   constructor() {
     this.initializeRoutes()
   }
 
   private initializeRoutes() {
-    this.router.get(this.path, this.indexController.index)
+    this.router.get(this.path, this.newsController.index)
   }
 }

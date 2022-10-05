@@ -12,4 +12,8 @@ export interface Config {
     format: 'combined' | 'common' | 'dev' | 'short' | 'tiny'
     level: 'error' | 'warn' | 'info' | 'http' | 'debug'
   }
+  inshorts: {
+    readApiBaseUrl: string
+    searchApiBaseUrl: string
+  }
 }

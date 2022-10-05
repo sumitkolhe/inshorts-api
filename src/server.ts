@@ -1,6 +1,6 @@
 import { App } from './app'
-import { IndexRoute } from './routes/index.route'
+import { NewsRoute } from './routes/news.route'
 
-const app = new App([new IndexRoute()])
+const app = new App([new NewsRoute()])
 
 app.listen()

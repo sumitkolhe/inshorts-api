@@ -14,4 +14,8 @@ export const productionConfig: Config = {
     format: 'tiny',
     level: 'info',
   },
+  inshorts: {
+    readApiBaseUrl: 'https://read-api.newsinshorts.com',
+    searchApiBaseUrl: 'https://search-api.newsinshorts.com',
+  },
 }
