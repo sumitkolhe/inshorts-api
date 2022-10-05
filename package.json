@@ -7,8 +7,8 @@
   "main": "index.js",
   "repository": "https://github.com/sumitkolhe/inshorts-api",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon",
-    "start": "npm run build && cross-env NODE_ENV=production node dist/server.js",
+    "dev": "cross-env NODE_ENV=development tsx watch ./src/server.ts",
+    "start": "npm run build && cross-env NODE_ENV=production node dist/src/server.js",
     "build": "tsc",
     "pretty": "prettier --write \"./**/*.{js,ts,json}\"",
     "lint": "eslint . --ext \".ts\"",
@@ -16,24 +16,31 @@
     "deploy": "vercel deploy --prod"
   },
   "dependencies": {
+    "axios": "^1.0.0",
+    "celebrate": "^15.0.1",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
     "express": "^4.18.1",
     "express-timeout-handler": "^2.2.2",
     "helmet": "^6.0.0",
+    "joi": "^17.6.2",
     "morgan": "^1.10.0",
+    "tsx": "^3.9.0",
     "winston": "^3.8.2"
   },
   "devDependencies": {
-    "@kolhe/eslint-config": "^1.1.5",
+    "@kolhe/eslint-config": "^1.1.8",
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.14",
     "@types/morgan": "^1.9.3",
-    "@types/node": "^18.7.23",
+    "@types/node": "^18.8.2",
     "eslint": "^8.24.0",
     "nodemon": "^2.0.20",
     "prettier": "^2.7.1",
     "ts-node": "^10.9.1",
     "typescript": "^4.8.4"
+  },
+  "engines": {
+    "node": ">=14.16"
   }
 }
