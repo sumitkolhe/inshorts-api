@@ -19,7 +19,12 @@ export const errorMiddleware = (error: HttpExceptionError, req: Request, res: Re
     }
 
     logger.error(`[${req.method}] ${req.path} >> StatusCode:: ${status}, Message:: ${message}`)
-    res.status(status).json({ message })
+
+    res.status(status).json({
+      status: 'FAILED',
+      message,
+      data: null,
+    })
   } catch (error) {
     next(error)
   }
