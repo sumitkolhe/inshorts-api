@@ -16,6 +16,6 @@ export const productionConfig: Config = {
   },
   inshorts: {
     readApiBaseUrl: 'https://read-api.newsinshorts.com',
-    searchApiBaseUrl: 'https://search-api.newsinshorts.com',
+    searchApiBaseUrl: 'https://news-search.newsinshorts.com',
   },
 }
