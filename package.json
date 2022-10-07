@@ -16,7 +16,7 @@
     "deploy": "vercel deploy --prod"
   },
   "dependencies": {
-    "axios": "^1.0.0",
+    "axios": "^1.1.2",
     "celebrate": "^15.0.1",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
@@ -25,7 +25,7 @@
     "helmet": "^6.0.0",
     "joi": "^17.6.2",
     "morgan": "^1.10.0",
-    "tsx": "^3.9.0",
+    "tsx": "^3.10.1",
     "winston": "^3.8.2"
   },
   "devDependencies": {
@@ -33,7 +33,7 @@
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.14",
     "@types/morgan": "^1.9.3",
-    "@types/node": "^18.8.2",
+    "@types/node": "^18.8.3",
     "eslint": "^8.24.0",
     "nodemon": "^2.0.20",
     "prettier": "^2.7.1",
