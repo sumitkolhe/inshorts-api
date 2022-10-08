@@ -3,7 +3,12 @@ import { logger } from '../utils/logger'
 import type { NextFunction, Request, Response } from 'express'
 import type { HttpExceptionError } from '../exceptions/http.exception'
 
-export const errorMiddleware = (error: HttpExceptionError, req: Request, res: Response, next: NextFunction) => {
+export const errorMiddleware = (
+  error: HttpExceptionError,
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
   try {
     let status: number
     let message = ''
