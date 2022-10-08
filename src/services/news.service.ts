@@ -29,7 +29,7 @@ export class NewsService {
 
     const allNewsResponse = createNewsPayload(allNewsItems.data.news_objs)
 
-    return allNewsResponse
+    return { count: allNewsResponse.length, articles: allNewsResponse }
   }
 
   public getTopNews = async (offset: number, limit: number) => {
@@ -59,23 +59,7 @@ export class NewsService {
 
     const topNewsResponse = createNewsPayload(allNewsItems.data.news_objs)
 
-    return topNewsResponse
-  }
-
-  private getPaginatedNews = async (maxPageLimit: number, initialOffsetId: string) => {
-    let offsetNewsId = initialOffsetId
-    let paginatedNewsItem: NewsMetaRequest['news_list'] = []
-
-    for (let i = maxPageLimit; i > 1; i--) {
-      const paginatedNews = await readApiClient.get<NewsMetaRequest>('/en/v4/news/load_more', {
-        params: { news_offset: offsetNewsId },
-      })
-
-      paginatedNewsItem = paginatedNewsItem.concat(paginatedNews.data.news_list)
-      offsetNewsId = paginatedNews.data.min_news_id
-    }
-
-    return paginatedNewsItem
+    return { count: topNewsResponse.length, articles: topNewsResponse }
   }
 
   public getTrendingNews = async (offset: number, limit: number) => {
@@ -95,7 +79,7 @@ export class NewsService {
 
     const trendingNewsResponse = createNewsPayload(allNewsItems.data.news_objs)
 
-    return trendingNewsResponse
+    return { count: trendingNewsResponse.length, articles: trendingNewsResponse }
   }
 
   public getTrendingTopics = async () => {
@@ -115,7 +99,7 @@ export class NewsService {
       })
     })
 
-    return allTopics
+    return { count: allTopics.length, topics: allTopics }
   }
 
   public getTopicNews = async (topic: string, offset: number, limit: number) => {
@@ -138,6 +122,22 @@ export class NewsService {
 
     const topicNewsResponse = createNewsPayload(sanitizedNewsItems)
 
-    return topicNewsResponse
+    return { count: topicNewsResponse.length, articles: topicNewsResponse }
+  }
+
+  private getPaginatedNews = async (maxPageLimit: number, initialOffsetId: string) => {
+    let offsetNewsId = initialOffsetId
+    let paginatedNewsItem: NewsMetaRequest['news_list'] = []
+
+    for (let i = maxPageLimit; i > 1; i--) {
+      const paginatedNews = await readApiClient.get<NewsMetaRequest>('/en/v4/news/load_more', {
+        params: { news_offset: offsetNewsId },
+      })
+
+      paginatedNewsItem = paginatedNewsItem.concat(paginatedNews.data.news_list)
+      offsetNewsId = paginatedNews.data.min_news_id
+    }
+
+    return paginatedNewsItem
   }
 }
