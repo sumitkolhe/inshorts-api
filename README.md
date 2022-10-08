@@ -11,7 +11,7 @@ An Unofficial API for Inshorts written in typescript.
 
 ## :mag_right: Usage
 
-### For usage, see [Documentation](https://docs.inshorts.me)
+For usage, see [Documentation](https://docs.inshorts.me)
 
 ## :construction_worker: Local development
 
