@@ -1,0 +1,15 @@
+{
+  "name": "inshorts-docs",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "sumit kolhe",
+  "main": "index.js",
+  "repository": "https://github.com/sumitkolhe/inshorts-api",
+  "scripts": {
+    "dev": "retype watch",
+    "build": "retype build"
+  },
+  "dependencies": {
+    "retypeapp": "^2.4.0"
+  }
+}

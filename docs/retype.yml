@@ -1,0 +1,15 @@
+input: .
+output: ./public
+url: https://docs.inshorts.me
+branding:
+  title: Inshorts
+  label: Docs v1.0.0
+links:
+  - text: API
+    link: https://inshorts.me
+  - text: Github
+    link: https://github.com/sumitkolhe/inshorts-api
+  - text: Author
+    link: https://sumit.co
+footer:
+  copyright: '&copy; Copyright {{ year }}. All rights reserved.'
