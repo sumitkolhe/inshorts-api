@@ -1,5 +1,5 @@
-import { App } from '../src/app.js'
-import { NewsRoute } from '../src/routes/news.route.js'
+import { App } from '../src/app'
+import { NewsRoute } from '../src/routes/news.route'
 
 const app = new App([new NewsRoute()])
 
