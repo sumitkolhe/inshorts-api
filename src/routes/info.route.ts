@@ -1,5 +1,5 @@
-import { InfoController } from 'controllers/info.controller'
 import { Router } from 'express'
+import { InfoController } from '../controllers/info.controller'
 import type { Routes } from '../interfaces/routes.interface'
 
 export class InfoRoute implements Routes {
