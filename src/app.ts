@@ -31,7 +31,9 @@ export class App {
   private initializeMiddlewares() {
     this.app.use(helmet())
     this.app.use(morgan(this.config.log.format))
-    this.app.use(cors({ origin: this.config.cors.origin, credentials: this.config.cors.credentials }))
+    this.app.use(
+      cors({ origin: this.config.cors.origin, credentials: this.config.cors.credentials })
+    )
     this.app.use(express.json())
     this.app.use(express.urlencoded({ extended: true }))
     // vercel has timeout limit of 10sec on hobby plan, this allows to throw an error before vercel times out
@@ -59,7 +61,8 @@ export class App {
     this.app.use((req, res) => {
       res.status(404).json({
         status: 'FAILED',
-        message: 'route not found',
+        message:
+          'route not found, please check documentation at https://github.com/sumitkolhe/inshorts-api',
         data: null,
       })
     })
