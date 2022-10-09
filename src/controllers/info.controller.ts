@@ -10,7 +10,6 @@ export class InfoController {
         author: 'Sumit Kolhe',
       })
     } catch (error) {
-      console.log(error)
       next(error)
     }
   }

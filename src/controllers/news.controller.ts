@@ -23,7 +23,6 @@ export class NewsController {
 
       res.status(200).json({ status: 'SUCCESS', message: null, data: response })
     } catch (error) {
-      console.log(error)
       next(error)
     }
   }
@@ -40,7 +39,6 @@ export class NewsController {
 
       res.status(200).json({ status: 'SUCCESS', message: null, data: response })
     } catch (error) {
-      console.log(error)
       next(error)
     }
   }
@@ -57,7 +55,6 @@ export class NewsController {
 
       res.status(200).json({ status: 'SUCCESS', message: null, data: response })
     } catch (error) {
-      console.log(error)
       next(error)
     }
   }
