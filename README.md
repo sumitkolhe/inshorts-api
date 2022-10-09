@@ -6,7 +6,7 @@ An Unofficial API for Inshorts written in typescript.
 
 - 🚀 Blazing fast. No more scraping the pages for news.
 - 📂 18 different categories.
-- 📑 Ability to limit the number of results per page.
+- 📑 Supports pagination using `offset` and `limit`.
 - ☁️ Serverless or Serverfull, host your own instance on easily.
 
 ## :mag_right: Usage
