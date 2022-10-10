@@ -61,8 +61,7 @@ export class App {
     this.app.use((req, res) => {
       res.status(404).json({
         status: 'FAILED',
-        message:
-          'route not found, please check documentation at https://github.com/sumitkolhe/inshorts-api',
+        message: 'route not found, please check documentation at https://docs.inshorts.me',
         data: null,
       })
     })
