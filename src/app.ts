@@ -1,6 +1,5 @@
 import cors from 'cors'
 import express from 'express'
-import helmet from 'helmet'
 import morgan from 'morgan'
 import timeout from 'express-timeout-handler'
 import { getConfig } from './configs'
@@ -29,14 +28,13 @@ export class App {
   }
 
   private initializeMiddlewares() {
-    this.app.use(helmet())
     this.app.use(morgan(this.config.log.format))
     this.app.use(
       cors({ origin: this.config.cors.origin, credentials: this.config.cors.credentials })
     )
     this.app.use(express.json())
     this.app.use(express.urlencoded({ extended: true }))
-    // vercel has timeout limit of 10sec on hobby plan, this allows to throw an error before vercel times out
+    // vercel has timeout limit of 10 sec on hobby plan, this allows to throw an error before vercel times out
     this.app.use(
       timeout.handler({
         timeout: 9500,
@@ -49,6 +47,7 @@ export class App {
         },
       })
     )
+    this.app.use(express.static('./public'))
   }
 
   private initializeRoutes(routes: Routes[]) {
