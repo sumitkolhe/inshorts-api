@@ -47,7 +47,7 @@ export class App {
         },
       })
     )
-    this.app.use(express.static('./public'))
+    this.app.use(express.static('static'))
   }
 
   private initializeRoutes(routes: Routes[]) {
@@ -71,7 +71,7 @@ export class App {
   }
 
   public listen() {
-    this.app.listen(this.port, () => {
+    this.app.listen(this.port, 'localhost', () => {
       logger.info(`🚀 Server listening on ${this.port}`)
     })
   }
