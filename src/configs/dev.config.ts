@@ -4,7 +4,7 @@ export const devConfig: Config = {
   env: 'development',
   server: {
     host: 'localhost',
-    port: 5000,
+    port: 3000,
   },
   cors: {
     origin: true,
