@@ -10,7 +10,7 @@
     "dev": "cross-env NODE_ENV=development tsx watch ./src/server.ts",
     "start": "npm run build && cross-env NODE_ENV=production node dist/src/server.js",
     "build": "tsc",
-    "pretty": "prettier --write \"./**/*.{js,ts,json}\"",
+    "format": "prettier --write \"./**/*.{js,ts,json}\"",
     "lint": "eslint . --ext \".ts\"",
     "lint:fix": "eslint --fix --ext .js,.ts .",
     "deploy": "vercel deploy --prod"
