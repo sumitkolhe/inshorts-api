@@ -70,7 +70,7 @@ export class App {
   }
 
   public listen() {
-    this.app.listen(this.port, 'localhost', () => {
+    this.app.listen(this.port, () => {
       logger.info(`🚀 Server listening on ${this.port}`)
     })
   }

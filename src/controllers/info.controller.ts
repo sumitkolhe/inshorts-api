@@ -25,8 +25,22 @@ export class InfoController {
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <script src="https://cdn.tailwindcss.com"></script>
           </head>
+          <style>
+          .no-select {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .no-select:focus {
+            outline: none !important;
+        }
+          </style>
         
-          <body class="bg-[#111]">
+          <body class="bg-[#111] no-select">
             <div class="mx-auto min-h-screen max-w-screen-lg flex flex-col">
               <main class="flex flex-1 flex-col overflow-hidden">
                 <div class="mx-auto my-auto container flex flex-col p-8 sm:p-8">
@@ -67,7 +81,7 @@ export class InfoController {
                     >
                       <div class="flex flex-col">
                         <span
-                          class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-red-500 text-red-500"
+                          class="text-xs uppercase bg-opacity-10 rounded text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-red-500 text-red-500"
                         >
                           Docs
                         </span>
@@ -87,7 +101,7 @@ export class InfoController {
                     >
                       <div class="flex flex-col">
                         <span
-                          class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-500 text-blue-500"
+                          class="text-xs uppercase rounded bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-500 text-blue-500"
                         >
                           Author
                         </span>
@@ -108,7 +122,7 @@ export class InfoController {
                     >
                       <div class="flex flex-col">
                         <span
-                          class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-green-500 text-green-500"
+                          class="text-xs uppercase rounded bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-green-500 text-green-500"
                         >
                           Open Source
                         </span>
@@ -128,7 +142,7 @@ export class InfoController {
                     >
                       <div class="flex flex-col">
                         <span
-                          class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-violet-500 text-violet-500"
+                          class="text-xs uppercase rounded bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-violet-500 text-violet-500"
                         >
                           Collaborate
                         </span>
