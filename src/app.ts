@@ -47,7 +47,6 @@ export class App {
         },
       })
     )
-    this.app.use(express.static('static'))
   }
 
   private initializeRoutes(routes: Routes[]) {
