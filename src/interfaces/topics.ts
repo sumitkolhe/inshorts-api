@@ -22,7 +22,7 @@ export interface TopicsMetaResponse {
   priority: number
 }
 
-export interface TopicNewsRequest {
+export interface PaginatedNewsRequest {
   total_page: number
   total_cards: number
   page_num: number

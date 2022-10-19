@@ -89,4 +89,24 @@ export class NewsController {
       next(error)
     }
   }
+
+  public searchNews = async (
+    req: Request,
+    res: Response<CustomResponse<NewsItemResponse[]>>,
+    next: NextFunction
+  ) => {
+    try {
+      const { offset, limit, query } = req.query
+
+      const response = await this.newsService.getSearchedNews(
+        query as string,
+        Number(offset),
+        Number(limit)
+      )
+
+      res.status(200).json({ status: 'SUCCESS', message: null, data: response })
+    } catch (error) {
+      next(error)
+    }
+  }
 }
