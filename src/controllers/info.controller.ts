@@ -16,8 +16,8 @@ export class InfoController {
             <meta property="og:title" content="Inshorts API" />
             <meta property="og:description" content="Inshorts API by Sumit Kolhe." />
             <meta property="twitter:card" content="summary_large_image" />
-            <meta property="twitter:url" content="https://lauridskern.com/" />
-            <meta property="twitter:title" content="Laurids Kern" />
+            <meta property="twitter:url" content="https://inshorts.me/" />
+            <meta property="twitter:title" content="Inshorts API" />
             <meta property="twitter:description" content="Inshorts API by Sumit Kolhe." />
           </head>
           <head>
