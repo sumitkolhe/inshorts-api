@@ -19,7 +19,8 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "importHelpers": true,
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "strict": true
   },
   "include": ["src/**/*.ts", "api/**/*.ts", ".env"],
   "exclude": ["node_modules"]

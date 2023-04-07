@@ -154,7 +154,7 @@ export class NewsService {
     return { count: searchedNewsResponse.length, articles: searchedNewsResponse }
   }
 
-  private getPaginatedNews = async (maxPageLimit: number, initialOffsetId: string) => {
+  private getPaginatedNews = async (maxPageLimit: number, initialOffsetId?: string) => {
     let offsetNewsId = initialOffsetId
     let paginatedNewsItem: NewsMetaRequest['news_list'] = []
 

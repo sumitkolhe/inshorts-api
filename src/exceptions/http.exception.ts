@@ -1,6 +1,6 @@
 export class HttpExceptionError extends Error {
   public status: number
-  public message: string
+  public message!: string
 
   constructor(status: number, message: string) {
     super(message)
